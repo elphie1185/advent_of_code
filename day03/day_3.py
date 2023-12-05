@@ -7,7 +7,7 @@ with open("day03/input.txt") as f:
 
 print(lines[0])
 
-# get indices of the row with number
+# get indices of the numbers for each row
 line_numers_indices = [
     [
         {
