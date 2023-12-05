@@ -7,8 +7,20 @@ with open("day03/input.txt") as f:
 
 print(lines[0])
 
-print(list(re.finditer("\d+", lines[0])))
 # get indices of the row with number
+line_numers_indices = [
+    [
+        {
+            "i_start": m.start(),
+            "i_end": m.end(),
+            "number": int(m.group())
+        }
+        for m in re.finditer("\d+", line)
+    ]
+    for line in lines
+]
+print(len(lines), len(line_numers_indices))
+
 
 #  check indice before and below for characters different from dot or num
 
